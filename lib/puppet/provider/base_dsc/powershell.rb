@@ -120,6 +120,7 @@ EOT
 
     fail(data['errormessage']) if !data['errormessage'].empty?
 
+    Puppet.warning "Tommy sez that rebootrequired is #{data['rebootrequired']}"
     notify_reboot_pending if data['rebootrequired'] == "true"
 
     data
