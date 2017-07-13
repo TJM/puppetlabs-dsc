@@ -120,7 +120,7 @@ EOT
 
     fail(data['errormessage']) if !data['errormessage'].empty?
 
-    notify_reboot_pending if data['rebootrequired'] == true
+    notify_reboot_pending if data['rebootrequired'] == "true"
 
     data
   end
